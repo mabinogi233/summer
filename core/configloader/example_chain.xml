@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config name="example_chain">
+    <chain name="chain_1">
+        <input_params_name>
+            <param code_name="in_1">in_1</param>
+            <param code_name="in_2">in_2</param>
+        </input_params_name>
+        <output_params_name>
+            <param code_name="out_1">out_1</param>
+        </output_params_name>
+        <nodes>
+            <node id="n_1">
+                <path>Absolute Path</path>
+                <function_name>run1</function_name>
+                <pred_nodes>
+                </pred_nodes>
+                <input_params_name>
+                    <param code_name="a">in_1</param>
+                    <param code_name="b">in_2</param>
+                </input_params_name>
+                <output_params_name>
+                    <param code_name="c">value_1</param>
+                </output_params_name>
+            </node>
+            <node id="n_2">
+                <path>Absolute Path</path>
+                <function_name>run2</function_name>
+                <pred_nodes>
+                    <node_id>n_1</node_id>
+                </pred_nodes>
+                <input_params_name>
+                    <param code_name="a">value_1</param>
+                </input_params_name>
+                <output_params_name>
+                    <param code_name="b">value_2</param>
+                </output_params_name>
+            </node>
+            <node id="n_3">
+                <path>Absolute Path</path>
+                <function_name>run3</function_name>
+                <pred_nodes>
+                    <node_id>n_1</node_id>
+                    <node_id>n_2</node_id>
+                </pred_nodes>
+                <input_params_name>
+                    <param code_name="a">value_1</param>
+                    <param code_name="b">value_2</param>
+                    <param code_name="c">in_2</param>
+                </input_params_name>
+                <output_params_name>
+                    <param code_name="d">out_1</param>
+                </output_params_name>
+            </node>
+        </nodes>
+    </chain>
+</config>

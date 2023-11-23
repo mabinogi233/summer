@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config name="web_config">
+    <web name="web_service_1">
+        <service>
+            <name>service_1</name>
+            <url>/service_3</url>
+            <chain_name>chain_1</chain_name>
+            <input_params_name>
+                <param web_param="in_p_1">in_1</param>
+                <param web_param="in_p_2">in_2</param>
+            </input_params_name>
+            <output_params_name>
+                <param json_param="out_p_1">out_1</param>
+            </output_params_name>
+        </service>
+    </web>
+</config>
